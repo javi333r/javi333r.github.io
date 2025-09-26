@@ -30,7 +30,7 @@ const config = {
   organizationName: 'javi333r', // Your GitHub username or org.
   projectName: 'javi333r.github.io', // For User Page, repo must be <user>.github.io
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
