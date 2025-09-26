@@ -1,0 +1,229 @@
+/**
+ * HackTheBox-inspired global styles for DevOps Documentation
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* Custom CSS Variables - HackTheBox Theme */
+:root {
+  --ifm-color-primary: #00ff41;
+  --ifm-color-primary-dark: #00e63a;
+  --ifm-color-primary-darker: #00d936;
+  --ifm-color-primary-darkest: #00b32d;
+  --ifm-color-primary-light: #1aff52;
+  --ifm-color-primary-lighter: #26ff5c;
+  --ifm-color-primary-lightest: #4dff7a;
+  
+  --ifm-background-color: #0a0a0a;
+  --ifm-background-surface-color: #1a1a2e;
+  --ifm-color-content: #ffffff;
+  --ifm-color-content-secondary: #4ecdc4;
+  
+  --ifm-navbar-background-color: #0a0a0a;
+  --ifm-navbar-shadow: 0 2px 10px rgba(0, 255, 65, 0.2);
+  
+  --ifm-footer-background-color: #0a0a0a;
+  --ifm-footer-color: #ccc;
+  
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Courier New', monospace;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 255, 65, 0.1);
+  
+  --ifm-menu-color: #ccc;
+  --ifm-menu-color-background-active: rgba(0, 255, 65, 0.1);
+  --ifm-menu-color-background-hover: rgba(0, 255, 65, 0.05);
+}
+
+/* Dark theme overrides */
+[data-theme='dark'] {
+  --ifm-color-primary: #00ff41;
+  --ifm-color-primary-dark: #00e63a;
+  --ifm-color-primary-darker: #00d936;
+  --ifm-color-primary-darkest: #00b32d;
+  --ifm-color-primary-light: #1aff52;
+  --ifm-color-primary-lighter: #26ff5c;
+  --ifm-color-primary-lightest: #4dff7a;
+  
+  --ifm-background-color: #0a0a0a;
+  --ifm-background-surface-color: #1a1a2e;
+  --ifm-color-content: #ffffff;
+  --ifm-color-content-secondary: #4ecdc4;
+  
+  --docusaurus-highlighted-code-line-bg: rgba(0, 255, 65, 0.1);
+}
+
+/* Global Styles */
+html {
+  background: #0a0a0a;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  color: #ffffff;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Navbar Styling */
+.navbar {
+  background: rgba(10, 10, 10, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #00ff41;
+}
+
+.navbar__brand:hover {
+  color: #00ff41 !important;
+}
+
+.navbar__item {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar__link:hover {
+  color: #00ff41 !important;
+}
+
+/* Sidebar Styling */
+.theme-doc-sidebar-container {
+  background: #0a0a0a !important;
+  border-right: 1px solid #333;
+}
+
+.menu__link {
+  font-family: 'JetBrains Mono', monospace;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.menu__link:hover {
+  background: rgba(0, 255, 65, 0.1) !important;
+  color: #00ff41 !important;
+}
+
+.menu__link--active {
+  background: rgba(0, 255, 65, 0.2) !important;
+  color: #00ff41 !important;
+  border-left: 3px solid #00ff41;
+}
+
+/* Content Styling */
+.main-wrapper {
+  background: #0a0a0a;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+/* Code Blocks */
+.prism-code {
+  background: #000 !important;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.token.keyword {
+  color: #00ff41 !important;
+}
+
+.token.string {
+  color: #4ecdc4 !important;
+}
+
+.token.comment {
+  color: #666 !important;
+}
+
+/* Buttons */
+.button {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.button--primary {
+  background: linear-gradient(45deg, #00ff41, #4ecdc4);
+  color: #000;
+  border: none;
+}
+
+.button--primary:hover {
+  background: linear-gradient(45deg, #4ecdc4, #00ff41);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 255, 65, 0.3);
+}
+
+.button--secondary {
+  background: transparent;
+  color: #00ff41;
+  border: 1px solid #00ff41;
+}
+
+.button--secondary:hover {
+  background: #00ff41;
+  color: #000;
+}
+
+/* Footer */
+.footer {
+  background: #0a0a0a !important;
+  border-top: 1px solid #333;
+}
+
+.footer__title {
+  color: #00ff41;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+}
+
+.footer__link-item:hover {
+  color: #00ff41 !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff41;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4ecdc4;
+}
+
+/* Animations */
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41, 0 0 15px #00ff41;
+  }
+  50% {
+    text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 30px #00ff41;
+  }
+}
+
+.glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 996px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar__item {
+    font-size: 0.9rem;
+  }
+}

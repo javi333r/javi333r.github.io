@@ -1,0 +1,445 @@
+/**
+ * HackTheBox-inspired CSS for DevOps Documentation
+ */
+
+/* Hero Banner */
+.heroBanner {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  color: #00ff41;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, #00ff41 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, #ff6b35 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.1;
+  animation: backgroundMove 20s linear infinite;
+}
+
+@keyframes backgroundMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-50px, -50px); }
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+.heroLeft {
+  padding: 2rem 0;
+}
+
+.heroRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glitch Effect */
+.glitchContainer {
+  position: relative;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.gradientTitle {
+  display: inline-block;
+  background: linear-gradient(90deg, #00ff41 0%, #4ecdc4 40%, #a0f0ff 60%, #00ff41 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 6s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.15);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glitch {
+  position: relative;
+  color: #00ff41;
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  animation: glitch 2s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  animation: glitch-1 0.5s infinite;
+  color: #ff6b35;
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-2 0.5s infinite;
+  color: #4ecdc4;
+  z-index: -2;
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch-1 {
+  0%, 100% { transform: translate(0); }
+  10% { transform: translate(-2px, -2px); }
+  20% { transform: translate(2px, 2px); }
+  30% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { transform: translate(0); }
+  10% { transform: translate(2px, 2px); }
+  20% { transform: translate(-2px, -2px); }
+  30% { transform: translate(2px, -2px); }
+  40% { transform: translate(-2px, 2px); }
+}
+
+/* Typewriter Effect */
+.heroSubtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #4ecdc4;
+  font-family: 'Courier New', monospace;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid #00ff41;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #00ff41; }
+}
+
+/* Hero Stats */
+.heroStats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stat {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 255, 65, 0.1);
+  border: 1px solid #00ff41;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.stat:hover {
+  background: rgba(0, 255, 65, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 255, 65, 0.3);
+}
+
+.statNumber {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ff41;
+  font-family: 'Courier New', monospace;
+}
+
+.statLabel {
+  display: block;
+  font-size: 0.8rem;
+  color: #4ecdc4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.buttonPrimary {
+  background: linear-gradient(45deg, #00ff41, #4ecdc4);
+  color: #000;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.buttonPrimary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.buttonPrimary:hover::before {
+  left: 100%;
+}
+
+.buttonPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 255, 65, 0.4);
+}
+
+.buttonSecondary {
+  background: transparent;
+  color: #00ff41;
+  border: 2px solid #00ff41;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.buttonSecondary:hover {
+  background: #00ff41;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 255, 65, 0.4);
+}
+
+/* Terminal */
+.terminal {
+  background: #0a0a0a;
+  border: 1px solid #00ff41;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  width: 100%;
+  font-family: 'Courier New', monospace;
+}
+
+.terminalHeader {
+  background: #1a1a1a;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #333;
+}
+
+.terminalButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.terminalButton {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff5f56;
+}
+
+.terminalButton:nth-child(2) {
+  background: #ffbd2e;
+}
+
+.terminalButton:nth-child(3) {
+  background: #27ca3f;
+}
+
+.terminalTitle {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.terminalBody {
+  padding: 1rem;
+  background: #0a0a0a;
+  min-height: 200px;
+}
+
+.terminalLine {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.prompt {
+  color: #00ff41;
+  font-weight: bold;
+}
+
+.command {
+  color: #4ecdc4;
+}
+
+.output {
+  color: #ccc;
+}
+
+.cursor {
+  color: #00ff41;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Matrix Rain */
+.matrixRain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.matrixCanvas {
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+
+/* Status Bar */
+.statusBar {
+  background: #1a1a2e;
+  border-top: 1px solid #00ff41;
+  padding: 1rem 0;
+}
+
+.statusItems {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.statusItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ccc;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.statusOnline {
+  background: #00ff41;
+}
+
+.statusWarning {
+  background: #ff6b35;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+  
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .glitch {
+    font-size: 2.5rem;
+  }
+  
+  .heroStats {
+    justify-content: center;
+  }
+  
+  .buttons {
+    justify-content: center;
+  }
+  
+  .terminal {
+    max-width: 100%;
+  }
+  
+  .statusItems {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
