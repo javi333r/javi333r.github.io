@@ -4,36 +4,36 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Kubernetes Mastery',
+    title: 'Dominio de Kubernetes',
     icon: '⚙️',
     description: (
       <>
-        Comprehensive guides for container orchestration, from basic deployments
-        to advanced cluster management, service mesh, and monitoring strategies.
+        Guías completas para orquestación de contenedores: desde deployments
+        básicos hasta gestión avanzada de clústeres, service mesh y monitoreo.
       </>
     ),
     color: '#00ff41',
     technologies: ['K8s', 'Docker', 'Helm', 'Istio']
   },
   {
-    title: 'GitHub Actions CI/CD',
+    title: 'CI/CD con Acciones de GitHub',
     icon: '🚀',
     description: (
       <>
-        Automated workflows, deployment pipelines, and best practices for
-        continuous integration and delivery using GitHub Actions.
+        Workflows automatizados, pipelines de despliegue y buenas prácticas de
+        integración y entrega continua usando GitHub Actions.
       </>
     ),
     color: '#4ecdc4',
     technologies: ['Actions', 'Workflows', 'Secrets', 'Runners']
   },
   {
-    title: 'Infrastructure as Code',
+    title: 'Infraestructura como Código',
     icon: '🏗️',
     description: (
       <>
-        Terraform, Ansible, and cloud-native infrastructure management.
-        Scalable, version-controlled infrastructure deployments.
+        Terraform, Ansible y gestión de infraestructura cloud-native.
+        Despliegues escalables y versionados de infraestructura.
       </>
     ),
     color: '#ff6b35',
@@ -64,7 +64,7 @@ function Feature({icon, title, description, color, technologies}) {
         <div className={styles.featureFooter}>
           <div className={styles.terminalPrompt}>
             <span className={styles.promptSymbol}>$</span>
-            <span className={styles.promptCommand}>explore {title.toLowerCase().replace(/\s+/g, '-')}</span>
+            <span className={styles.promptCommand}>explorar {title.toLowerCase().replace(/\s+/g, '-')}</span>
           </div>
         </div>
       </div>

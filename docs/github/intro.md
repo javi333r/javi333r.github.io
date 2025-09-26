@@ -1,12 +1,12 @@
-# GitHub Actions Documentation
+# Documentación de Acciones de GitHub
 
-Welcome to the GitHub Actions section! ⚡
+¡Bienvenido a la sección de Acciones de GitHub! ⚡
 
-## What are GitHub Actions?
+## ¿Qué son las Acciones de GitHub?
 
-GitHub Actions is a CI/CD platform that allows you to automate your build, test, and deployment pipeline directly within your GitHub repository.
+GitHub Actions es una plataforma de CI/CD que te permite automatizar el build, los tests y los despliegues directamente dentro de tu repositorio de GitHub.
 
-## Quick Start
+## Inicio rápido
 
 ```yaml
 name: CI/CD Pipeline
@@ -38,29 +38,29 @@ jobs:
       run: npm run build
 ```
 
-## Core Concepts
+## Conceptos clave
 
 ### Workflows
-Automated processes that run in your repository when triggered by events.
+Procesos automatizados que se ejecutan en tu repo cuando se disparan por eventos.
 
 ### Jobs
-A set of steps that execute on the same runner.
+Conjunto de pasos que corren en el mismo runner.
 
 ### Steps
-Individual tasks that can run commands or actions.
+Tareas individuales que ejecutan comandos o actions.
 
 ### Actions
-Reusable units of code that can be shared across workflows.
+Unidades reutilizables de código que pueden compartirse entre workflows.
 
-## Common Use Cases
+## Casos de uso comunes
 
-- **Continuous Integration**: Automated testing on every push
-- **Continuous Deployment**: Automated deployment to production
-- **Code Quality**: Linting, security scanning, code coverage
-- **Package Management**: Publishing to npm, Docker Hub, etc.
-- **Infrastructure**: Terraform deployments, cloud provisioning
+- **Continuous Integration**: tests automatizados en cada push
+- **Continuous Deployment**: despliegue automático a producción
+- **Calidad de código**: linting, análisis de seguridad, cobertura
+- **Gestión de paquetes**: publicación en npm, Docker Hub, etc.
+- **Infraestructura**: despliegues con Terraform, aprovisionamiento cloud
 
-## Workflow Examples
+## Ejemplos de workflows
 
 ### Docker Build & Push
 ```yaml
@@ -94,7 +94,7 @@ jobs:
         tags: user/app:latest
 ```
 
-### Kubernetes Deployment
+### Despliegue a Kubernetes
 ```yaml
 name: Deploy to Kubernetes
 
@@ -120,24 +120,24 @@ jobs:
         kubectl rollout status deployment/my-app
 ```
 
-## Topics Covered
+## Temas cubiertos
 
-- **Workflow Syntax**: YAML configuration, triggers, jobs
-- **Actions Marketplace**: Using and creating custom actions
-- **Secrets Management**: Secure handling of sensitive data
-- **Matrix Builds**: Testing across multiple environments
-- **Caching**: Speeding up workflows with dependency caching
-- **Environments**: Deployment environments and protection rules
-- **Security**: OIDC, permissions, security best practices
+- **Sintaxis de Workflows**: configuración YAML, triggers, jobs
+- **Actions Marketplace**: uso y creación de custom actions
+- **Gestión de Secrets**: manejo seguro de datos sensibles
+- **Matrix Builds**: pruebas en múltiples entornos
+- **Caching**: acelerar workflows con caché de dependencias
+- **Environments**: entornos de despliegue y reglas de protección
+- **Seguridad**: OIDC, permisos, buenas prácticas de seguridad
 
-## Best Practices
+## Buenas prácticas
 
-1. **Use specific action versions** (e.g., `@v3` instead of `@main`)
-2. **Minimize workflow run time** with caching and parallel jobs
-3. **Secure your secrets** and use environment protection rules
-4. **Use matrix strategies** for testing across multiple versions
-5. **Keep workflows DRY** with reusable workflows and composite actions
+1. **Usa versiones específicas de actions** (por ej., `@v3` en lugar de `@main`)
+2. **Minimiza el tiempo de ejecución** con caché y jobs en paralelo
+3. **Protege tus secrets** y usa reglas de protección en environments
+4. **Usa estrategias de matrix** para probar múltiples versiones
+5. **Mantén los workflows DRY** con reusable workflows y composite actions
 
 ---
 
-> 🔒 **Security Note**: Always use secrets for sensitive data and follow the principle of least privilege for workflow permissions.
+> 🔒 **Nota de seguridad**: Usa siempre secrets para datos sensibles y sigue el principio de mínimo privilegio en permisos de workflows.

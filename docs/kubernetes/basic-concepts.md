@@ -1,23 +1,23 @@
-# Kubernetes: Basic Concepts
+# Kubernetes: Conceptos básicos
 
-This section introduces essential Kubernetes objects and abstractions: Pods, Deployments, Services, Namespaces.
+Esta sección introduce los objetos y abstracciones esenciales de Kubernetes: Pods, Deployments, Services y Namespaces.
 
 ## Pods
-Smallest deployable unit in Kubernetes containing one or more containers.
+La unidad desplegable más pequeña en Kubernetes. Contiene uno o varios containers.
 
 ## Deployments
-Declarative updates to Pods and ReplicaSets.
+Actualizaciones declarativas de Pods y ReplicaSets. Permiten escalar y hacer rollouts/rollbacks.
 
 ## Services
-Stable networking endpoints for Pods.
+Endpoints de red estables para exponer Pods. Tipos comunes: ClusterIP, NodePort, LoadBalancer.
 
 ## Namespaces
-Logical separation within a cluster for resources and access controls.
+Separación lógica dentro del clúster para recursos y control de acceso.
 
 ---
 
-Continue exploring other topics:
-- [Installation](./installation.md)
-- [Your First Pod](./first-pod.md)
-- [Services & Networking](./services.md)
-- [Configuration](./configuration.md)
+Sigue explorando:
+- [Instalación](./installation.md)
+- [Tu primer Pod](./first-pod.md)
+- [Servicios y Networking](./services.md)
+- [Gestión de configuración](./configuration.md)

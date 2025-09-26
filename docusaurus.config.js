@@ -36,8 +36,8 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'es',
+    locales: ['es'],
   },
 
   presets: [
@@ -85,7 +85,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'githubSidebar',
             position: 'left',
-            label: 'GitHub Actions',
+            label: 'Acciones de GitHub',
           },
           {
             href: 'https://github.com/javi333r',
@@ -98,7 +98,7 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Documentación',
             items: [
               {
                 label: 'Kubernetes',
@@ -111,7 +111,7 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Comunidad',
             items: [
               {
                 label: 'Stack Overflow',
@@ -128,7 +128,7 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'Más',
             items: [
               {
                 label: 'GitHub',

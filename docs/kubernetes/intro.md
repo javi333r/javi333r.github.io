@@ -1,42 +1,42 @@
-# Kubernetes Documentation
+# Documentación de Kubernetes
 
-Welcome to the Kubernetes section of this DevOps documentation hub! 🚀
+¡Bienvenido a la sección de Kubernetes de este hub de documentación DevOps! 🚀
 
-## What is Kubernetes?
+## ¿Qué es Kubernetes?
 
-Kubernetes (K8s) is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications.
+Kubernetes (K8s) es una plataforma open‑source de orquestación de contenedores que automatiza el despliegue, el escalado y la gestión de aplicaciones containerizadas.
 
-## Quick Start
+## Inicio rápido
 
 ```bash
-# Check cluster status
+# Ver información del clúster
 kubectl cluster-info
 
-# Get all pods
+# Listar todos los pods (en todos los namespaces)
 kubectl get pods --all-namespaces
 
-# Create a deployment
+# Crear un Deployment
 kubectl create deployment nginx --image=nginx
 
-# Expose the deployment
+# Exponer el Deployment
 kubectl expose deployment nginx --port=80 --type=LoadBalancer
 ```
 
-## Topics Covered
+## Temas cubiertos
 
-- **Basic Concepts**: Pods, Services, Deployments
-- **Configuration**: ConfigMaps, Secrets, Environment Variables
-- **Storage**: Persistent Volumes, Storage Classes
+- **Conceptos básicos**: Pods, Services, Deployments
+- **Configuración**: ConfigMaps, Secrets, Variables de entorno
+- **Almacenamiento**: Persistent Volumes, Storage Classes
 - **Networking**: Ingress, Network Policies, Service Mesh
-- **Security**: RBAC, Pod Security Standards, Network Security
-- **Monitoring**: Prometheus, Grafana, Logging
-- **Advanced**: Operators, Custom Resources, Helm Charts
+- **Seguridad**: RBAC, Pod Security Standards, Network Security
+- **Monitoreo**: Prometheus, Grafana, Logging
+- **Avanzado**: Operators, Custom Resources, Helm Charts
 
-## Architecture Overview
+## Visión general de arquitectura
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Master Node   │    │   Worker Node   │    │   Worker Node   │
+│  Control Plane  │    │   Worker Node   │    │   Worker Node   │
 │                 │    │                 │    │                 │
 │  ┌───────────┐  │    │  ┌───────────┐  │    │  ┌───────────┐  │
 │  │ API Server│  │    │  │  kubelet  │  │    │  │  kubelet  │  │
@@ -54,14 +54,14 @@ kubectl expose deployment nginx --port=80 --type=LoadBalancer
 └─────────────────┘
 ```
 
-## Getting Started
+## Índice sugerido
 
-1. [Basic Concepts](./basic-concepts.md)
-2. [Installation & Setup](./installation.md)
-3. [Your First Pod](./first-pod.md)
-4. [Services & Networking](./services.md)
-5. [Configuration Management](./configuration.md)
+1. [Conceptos básicos](./basic-concepts.md)
+2. [Instalación y configuración](./installation.md)
+3. [Tu primer Pod](./first-pod.md)
+4. [Servicios y Networking](./services.md)
+5. [Gestión de configuración](./configuration.md)
 
 ---
 
-> 💡 **Tip**: Start with the basic concepts if you're new to Kubernetes, or jump directly to specific topics if you have experience.
+> 💡 **Consejo**: Si empiezas desde cero, lee primero los conceptos básicos. Si ya tienes experiencia, ve directo al tema que necesites.

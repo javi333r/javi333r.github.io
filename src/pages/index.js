@@ -54,33 +54,33 @@ function HomepageHeader() {
             </Heading>
             <p className={styles.heroSubtitle}>
               <span className={styles.typewriter}>
-                Kubernetes • GitHub Actions • Infrastructure as Code
+                Kubernetes • GitHub Actions • GitLab • Infra como Código
               </span>
             </p>
             <div className={styles.heroStats}>
               <div className={styles.stat}>
                 <span className={styles.statNumber}>100+</span>
-                <span className={styles.statLabel}>K8s Configs</span>
+                <span className={styles.statLabel}>Configs de K8s</span>
               </div>
               <div className={styles.stat}>
                 <span className={styles.statNumber}>50+</span>
-                <span className={styles.statLabel}>GitHub Actions</span>
+                <span className={styles.statLabel}>Workflows de GitHub</span>
               </div>
               <div className={styles.stat}>
                 <span className={styles.statNumber}>24/7</span>
-                <span className={styles.statLabel}>Monitoring</span>
+                <span className={styles.statLabel}>Monitoreo</span>
               </div>
             </div>
             <div className={styles.buttons}>
               <Link
                 className={clsx('button', styles.buttonPrimary)}
                 to="/docs/kubernetes/intro">
-                <span>🚀 Kubernetes Docs</span>
+                <span>🚀 Documentación de Kubernetes</span>
               </Link>
               <Link
                 className={clsx('button', styles.buttonSecondary)}
                 to="/docs/github/intro">
-                <span>⚡ GitHub Actions</span>
+                <span>⚡ Acciones de GitHub</span>
               </Link>
             </div>
           </div>
@@ -103,15 +103,15 @@ function StatusBar() {
         <div className={styles.statusItems}>
           <div className={styles.statusItem}>
             <span className={styles.statusDot + ' ' + styles.statusOnline}></span>
-            <span>Cluster Status: Online</span>
+            <span>Estado del clúster: En línea</span>
           </div>
           <div className={styles.statusItem}>
             <span className={styles.statusDot + ' ' + styles.statusOnline}></span>
-            <span>CI/CD Pipeline: Active</span>
+            <span>Pipeline CI/CD: Activo</span>
           </div>
           <div className={styles.statusItem}>
             <span className={styles.statusDot + ' ' + styles.statusWarning}></span>
-            <span>Monitoring: 2 Alerts</span>
+            <span>Monitoreo: 2 alertas</span>
           </div>
         </div>
       </div>

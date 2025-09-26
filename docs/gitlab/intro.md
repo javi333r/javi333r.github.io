@@ -1,12 +1,12 @@
-# GitLab CI/CD Documentation
+# Documentación de GitLab CI/CD
 
-Welcome to the GitLab CI/CD section! 🦊⚙️
+¡Bienvenido a la sección de GitLab CI/CD! 🦊⚙️
 
-## What is GitLab CI/CD?
+## ¿Qué es GitLab CI/CD?
 
-GitLab CI/CD is a built-in continuous integration and delivery system that automates building, testing, and deploying your code using `.gitlab-ci.yml` pipelines.
+GitLab CI/CD es un sistema integrado de integración y entrega continua que automatiza el build, los tests y el despliegue de tu código usando pipelines definidos en `.gitlab-ci.yml`.
 
-## Quick Start
+## Inicio rápido
 
 ```yaml
 stages:
@@ -47,22 +47,22 @@ deploy_prod:
     - echo "Deploying..."
 ```
 
-## Core Concepts
+## Conceptos clave
 
 - Pipelines, Stages, Jobs
-- Runners (shared and specific)
-- Artifacts and Caching
-- Environments and Protected branches
-- Variables and Secrets (masked/protected)
+- Runners (shared y specific)
+- Artifacts y Caching
+- Environments y Protected branches
+- Variables y Secrets (masked/protected)
 
-## Best Practices
+## Buenas prácticas
 
-1. Use specific image tags (avoid `latest`).
-2. Cache dependencies to speed up pipelines.
-3. Protect deploy jobs with environments and approvals.
-4. Use masked/protected variables for secrets.
-5. Split pipelines by stages and use needs/when to optimize.
+1. Usa tags de imagen específicos (evita `latest`).
+2. Cachea dependencias para acelerar los pipelines.
+3. Protege los jobs de deploy con environments y aprobaciones.
+4. Usa variables protegidas (masked/protected) para secrets.
+5. Divide los pipelines por stages y usa `needs`/`when` para optimizar.
 
 ---
 
-> 🔒 Security tip: Use protected variables and limit runner access to trusted repositories only.
+> 🔒 Consejo de seguridad: Usa variables protegidas y limita el acceso de runners a repos de confianza.
