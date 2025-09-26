@@ -49,6 +49,13 @@ function HomepageHeader() {
       <div className="container">
         <div className={styles.heroContent}>
           <div className={styles.heroLeft}>
+            <Link to="/" className={styles.heroLogoLink} aria-label="Ir al inicio">
+              <img
+                src="/img/infra-synthesis-logo.svg"
+                alt="Infra Synthesis"
+                className={styles.heroLogo}
+              />
+            </Link>
             <Heading as="h1" className={styles.heroTitle}>
               <span className={styles.gradientTitle}>{siteConfig.title}</span>
             </Heading>
